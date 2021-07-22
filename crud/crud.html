@@ -20,28 +20,58 @@
     </header>
  
     <section>
-        <form class="card p-4" style="max-width:500px;">
+        <form onsubmit="agregarUsuario(event)" class="card p-4" style="max-width:500px;">
         <div class="form-floating mb-3 ">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <label for="email">Email address</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="pass" placeholder="contraseña">
+            <label for="pass">contraseña</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="nombre" placeholder="nombre">
+            <label for="nombre">nombre</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="rol" placeholder="rol">
+            <label for="rol">rol</label>
           </div>
+          <button class="btn btn-succes">agregar usuario</button>
         </form>
     </section>
 
     <section>
-
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+               <th scope="col">nombre</th>
+                <th scope="col">rol</th>
+                <th scope="col">acciones</th>
+              </tr>
+            </thead>
+            <tbody id="contenidoTabla">
+              <tr>
+                <th scope="row">1</th>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><button class="btn btn-warning">Editar</button></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><button class="btn btn-warning">Editar</button></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td><button class="btn btn-warning">Editar</button></td>
+              </tr>
+            </tbody>
+          </table>
     </section>
 </main>
   
